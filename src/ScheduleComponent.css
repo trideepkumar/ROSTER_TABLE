@@ -1,0 +1,187 @@
+/* ScheduleComponent.css */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  background-color: #f3f4f6;
+  color: black;
+  cursor: pointer;
+}
+
+.viewButton.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.sidebar {
+  min-width: 200px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar .header {
+  height: 48px;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: bold;
+}
+
+.sidebar .employee {
+  height: 64px;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+
+.schedule {
+  flex-grow: 1;
+  overflow-x: auto;
+}
+
+.schedule .dateHeader {
+  height: 64px;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7e7;
+  font-weight: 500;
+  text-align: center;
+}
+
+.schedule .eventContainer {
+  display: flex;
+  min-width: fit-content;
+}
+
+.schedule .event {
+  height: 80px;
+  border: 0.1px solid rgb(213, 213, 213);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.schedule .eventInfo {
+  background-color: #dbeafe;
+  color: #1e40af;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.schedule .eventInfo .subText {
+  color: grey;
+  font-size: 0.775rem;
+}
+
+.schedule .showMore {
+  font-size: 0.775rem;
+  color: #1e40af;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+}
+
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1300; /* Ensure it appears above other content */
+}
+
+.modal {
+  /* Modal background styling */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.eventTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.eventTable th,
+.eventTable td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.eventTable th {
+  background-color: #f4f4f4;
+}
+
+.eventCareGiver {
+  font-weight: bold;
+}
+
+.eventTimes {
+  color: #555;
+}
+
+.closeModal {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.closeModal:hover {
+  background-color: #45a049;
+}
