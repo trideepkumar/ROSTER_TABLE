@@ -22,18 +22,27 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+.addNewEvent{
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  margin-right: 10px;
+  border: 0.1px solid green;
+  background-color: #f3f6f3;
+  color: rgb(14, 189, 14);
+  cursor: pointer;
+}
 
 .viewButton {
   padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  border: none;
+  /* border-radius: 0.375rem; */
+  border: 0.1px solid purple;
   background-color: #f3f4f6;
   color: black;
   cursor: pointer;
 }
 
 .viewButton.active {
-  background-color: #3b82f6;
+  background-color: rgb(141, 57, 141);
   color: white;
 }
 
@@ -69,6 +78,7 @@
   border-right: 1px solid #e5e7e7;
   font-weight: 500;
   text-align: center;
+  /* background-color: red; */
 }
 
 .schedule .eventContainer {
@@ -184,4 +194,94 @@
 
 .closeModal:hover {
   background-color: #45a049;
+}
+
+
+/* Add these styles to your existing CSS file */
+
+.daily {
+  flex: 1;
+  overflow: auto;
+}
+
+.dailyContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+}
+
+.dailyHeader {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.cornerCell {
+  min-width: 150px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.hourCell {
+  min-width: 100px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.employeeRow {
+  display: flex;
+}
+
+.employeeCell {
+  min-width: 150px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.timeSlotCell {
+  min-width: 120px;
+  height: 60px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0px;
+}
+
+.eventInfo {
+  background-color: #e3f2fd;
+  /* border-radius: 4px; */
+  padding: 0px;
+  margin: 0px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.eventInfo:hover {
+  background-color: #bbdefb;
+}
+
+.eventTime {
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* Adjust existing styles */
+.schedule {
+  flex: 1;
+  overflow: auto;
+}
+
+.eventContainer {
+  display: flex;
+  min-width: fit-content;
 }
